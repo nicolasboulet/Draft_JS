@@ -4,6 +4,7 @@ const requestHandler = (req, res) => {
   const method = req.method;
 
   if (url === '/') {
+    res.setHeader('Content-Type', 'text/html')
     res.write('<html>');
     res.write('<head><title>Welcome</title></head>');
     
@@ -17,6 +18,7 @@ const requestHandler = (req, res) => {
     return res.end();
   }
   if (url === '/users') {
+    res.setHeader('Content-Type', 'text/html')
     res.write('<html>');
     res.write('<head><title>Users</title></head>');
     
