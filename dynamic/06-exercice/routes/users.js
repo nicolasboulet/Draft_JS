@@ -7,9 +7,12 @@ const router = express.Router();
 const adminData = require('./admin');
 
 router.get('/', (req, res) => {
-  const users = adminData.users;
+  const usersLists = adminData.users;
+  console.log(usersLists)
   res.render('users', {
-
+    pageTitle: 'Add Users',
+    path: '/',
+    users: usersLists
   });
 
 });

@@ -19,7 +19,7 @@ router.get('/add-users', (req, res, next) => {
 });
 
 router.post('/add-users', (req, res, next) => {
-  products.push({ title: req.body.title });
+  users.push({ name: req.body.name });
   res.redirect('/');
 });
 
